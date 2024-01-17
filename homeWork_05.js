@@ -86,15 +86,15 @@ const total = 13;
 //result = [4, 9]
 const firstSum = (arr, total) => {
   let pair = [];
-  for (let i = 0; i < arr.length - 1; i++) {
-    for (let j = 1; i < arr.length - 2; j++) {
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
       if (arr[i] + arr[j] === total) {
         pair.push(arr[i], arr[j]);
         return pair;
       }
     }
   }
-  return pair;
+  return 'There is no such pair';
 };
 firstSum(arr, total);
 // 2) Какая сложность у вашего алгоритма ?
